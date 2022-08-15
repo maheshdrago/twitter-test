@@ -15,7 +15,7 @@
     {%for item in data%}
       <tr>
         <th scope="row" style="font-family: system-ui; font-weight:800;">{{ loop.index }}</th>
-        <td style="font-family: system-ui; font-weight:800;"><i class="fa-solid fa-hashtag" ></i><a href="">{{item['name'].replace("#",'')}}</a></td>
+        <td style="font-family: system-ui; font-weight:800;"><i class="fa-solid fa-hashtag" ></i><a href="#" onclick="toggle('{{loop.index}}','{{item['name'].replace("#",'')}}','{{item['tweet_volume']}}')">{{item['name'].replace("#",'')}}</a></td>
         <td style="font-family: system-ui; font-weight:800;">
             {% if item['tweet_volume']==None%}
             Less than 10K
